@@ -1,0 +1,19 @@
+{
+  "name": "module6-week5day3-lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvyLiu0/Module6-Week5Day3-Lab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IvyLiu0/Module6-Week5Day3-Lab/issues"
+  },
+  "homepage": "https://github.com/IvyLiu0/Module6-Week5Day3-Lab#readme"
+}
