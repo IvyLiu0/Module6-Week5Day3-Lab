@@ -15,12 +15,8 @@ class App extends React.Component {
       };
     }
 
-    componentDidMount(){
-      this.getLists();
-    }
-
     getLists = () => {
-      fetch("http://localhost:8080/api/books--drop")
+      fetch("http://localhost:8080/api/books")
       .then(res => res.json())
       .then(result =>
         this.setState({
@@ -47,7 +43,7 @@ class App extends React.Component {
     }
 
     createList = () => {
-      fetch("http://localhost:8080/api/books--drop", {
+      fetch("http://localhost:8080/api/books", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -72,7 +68,7 @@ class App extends React.Component {
           }
         },
         () => {
-          fetch("http://localhost:8080/api/books--drop/" + id)
+          fetch("http://localhost:8080/api/book/" + id)
           .then(res => res.json())
           .then(result => {
             this.setState({
@@ -87,7 +83,7 @@ class App extends React.Component {
     }
 
     updateList =(event, id) => {
-      fetch("http://localhost:8080/api/books--drop/" + id, {
+      fetch("http://localhost:8080/api/book/" + id, {
         method: "PUT",
         headers:{
           "Content-Type": "application/json"
@@ -107,7 +103,7 @@ class App extends React.Component {
     }
 
     deleteList =(event, id) => {
-      fetch("http://localhost:8080/books--drop/" + id, {
+      fetch("http://localhost:8080/book/" + id, {
         method: "DELETE"
       })
         .then(res => res.json())
