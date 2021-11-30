@@ -21,7 +21,7 @@ exports.createBook = (req, res) => {
 };
 
 exports.getBook = (req, res) => {
-    Inventory.findById(req.params.id).select('-__v')
+    Book.findById(req.params.id).select('-__v')
     .then(Book => {
         res.status(200).json(Book);
     }).catch(error => {

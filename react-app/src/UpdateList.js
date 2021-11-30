@@ -39,11 +39,11 @@ function UpdateList(props) {
                     />
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button varianr="secondary" onClick={handleClose}>
+                    <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
                     <Button 
-                        varianr="primary" 
+                        variant="primary" 
                         onClick={(event) => {
                             handleClose();
                             props.updateList(event, props.elementId);
