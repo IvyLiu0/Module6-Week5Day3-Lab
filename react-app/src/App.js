@@ -68,7 +68,7 @@ class App extends React.Component {
           }
         },
         () => {
-          fetch("http://localhost:8080/api/book/" + id)
+          fetch("http://localhost:8080/api/books/" + id)
           .then(res => res.json())
           .then(result => {
             this.setState({
@@ -83,7 +83,7 @@ class App extends React.Component {
     }
 
     updateList =(event, id) => {
-      fetch("http://localhost:8080/api/book/" + id, {
+      fetch("http://localhost:8080/api/books/" + id, {
         method: "PUT",
         headers:{
           "Content-Type": "application/json"
@@ -103,7 +103,7 @@ class App extends React.Component {
     }
 
     deleteList =(event, id) => {
-      fetch("http://localhost:8080/book/" + id, {
+      fetch("http://localhost:8080/books/" + id, {
         method: "DELETE"
       })
         .then(res => res.json())

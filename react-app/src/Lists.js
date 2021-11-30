@@ -7,13 +7,11 @@ function Lists(props) {
     let listrows = [];
     props.alldata.forEach(element => {
         listrows.push(
-            <tr key={element.id}>
-                <td>{element.id}</td>
+            <tr key={element.title}>
                 <td>{element.title}</td>
                 <td>{element.author}</td>
                 <td>
                     <UpdateList
-                        elementId={element.id}
                         singledata={props.singledata}
                         getList={props.getList}
                         updateList={props.updateList}
@@ -23,7 +21,6 @@ function Lists(props) {
                 </td>
                 <td>
                     <DeleteList
-                        elementId={element.id}
                         singledata={props.singledata}
                         getList={props.getList}
                         deleteList={props.deleteList}
@@ -37,7 +34,6 @@ function Lists(props) {
         <table className="table table-striped">
             <thead>
                 <tr>
-                    <th>#</th>
                     <th>Title</th>
                     <th>Author</th>
                     <th>Update</th>
